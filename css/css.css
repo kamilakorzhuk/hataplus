@@ -1,0 +1,741 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/subset-Roboto-Bold.eot');
+    src: url('../fonts/subset-Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Bold.woff') format('woff'),
+        url('../fonts/subset-Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/subset-Roboto-Regular.eot');
+    src: url('../fonts/subset-Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Regular.woff') format('woff'),
+        url('../fonts/subset-Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/subset-RobotoSlab-Bold.eot');
+    src: url('../fonts/subset-RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/subset-RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/subset-RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    cursor: url('cursor.cur'), auto;
+}
+a:hover{
+    cursor: url('cursor.cur'), auto;
+}
+.clear::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.resize{
+    width: 960px;
+    margin: 0 auto;
+}
+.wraper-center{
+    margin: 0 -14px;
+    font-size: 0;
+}
+.column{
+    display: inline-block;
+    width: 219px;
+    margin: 0 14px;
+    vertical-align: middle;
+}
+h1{
+    font: 30px 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #24242b;
+    margin: 0;
+}
+h2{
+    color: #24242b;
+    font-size: 24px;
+}
+h3{
+    color: #24242b;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+header{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.topline{
+    background-color: #1f1f56;
+    padding: 18px 0;
+    min-height: 55px;
+    position: relative;
+}
+.topline ul,
+.topline li a{
+    color: #b1b1d2;
+    font-size: 14px;
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.topline li{
+    display: inline-block;
+    padding-right: 24px;
+}
+.topline a:hover{
+    color: #fd8300;
+}
+.topline li:last-child{
+    padding-right: 0;
+}
+.cheeckenburger-menu{
+    position: absolute;
+    background-color: #fff;
+    height: 32px;
+    display: none;
+    width: 40px;
+    border-radius: 4px;
+    top: calc(50% - 16px);
+}
+.cheeckenburger-menu span{
+    left: 5px;
+}
+.cheeckenburger-menu span,
+.cheeckenburger-menu span::before,
+.cheeckenburger-menu span::after{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #b1b1d2;
+    border-radius: 4px;
+    top: calc(50% - 1.5px);
+}
+.cheeckenburger-menu span::before{
+    content: "";
+    top: -7px;
+    right: 0;
+}
+.cheeckenburger-menu span:after{
+    content: "";
+    top: 7px;
+    right: 0;
+}
+.social-media{
+    float: right;
+    position: relative;
+}
+.social-media .fb{
+    display: block;
+    width: 12px;
+    height: 20px;
+    background-image: url(../images/sprite.png);
+    background-position: -4px -2px;
+    transition: background-position .5s ease;
+}
+.social-media .fb:hover{
+    background-position: -15px -2px;
+}
+.social-media .tw{
+    padding-right: 7px;
+}
+.social-media .tw{
+    display: block;
+    width: 20px;
+    height: 18px;
+    background-image: url(../images/sprite.png);
+    background-position: -70px -2px;
+    transition: background-position .5s ease;
+}
+.social-media .tw:hover{
+    background-position: -89px -2px;
+}
+.social-media .inst{
+    display: block;
+    width: 19px;
+    height: 18px;
+    background-image: url(../images/sprite.png);
+    background-position: -28px -2px;
+    transition: background-position .5s ease;
+}
+.social-media .inst:hover{
+    background-position: -49px -2px;
+}
+.header-wraper,
+.footer-wraper{
+    padding: 30px 0; 
+    font-size: 0;
+}
+.border{
+    position: relative;
+}
+.border:after{
+    content: "";
+    position: absolute;
+    background-color: #e4e4ec;
+    height: 51px;
+    width: 1px;
+    top: 1px;
+    right: -5px;
+}
+.phones{
+    padding-left: 45px;
+}
+.phones a{
+    font-size: 18px;
+    margin: 0;
+    color: #25252c;
+    font-family: "Arial";
+    text-decoration: none;
+}
+.header-number{
+    padding-bottom: 12px;
+}
+.header-number a{
+    position: relative;
+}
+.header-number a:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 17px;
+    background-image: url(../images/sprite.png);
+    background-position: -44px -22px;
+    top: 3px;
+    left: -28px;
+}
+.meneger{
+     display: inline-block;
+}
+.mesengers a{
+    color: #25252c;
+    font-size: 16px;
+    padding-left: 28px;
+}
+.mesengers p{
+    margin: 0;
+}
+.e-mail{
+    padding-bottom: 13px;
+    text-decoration: underline;
+}
+.e-mail a{
+    font-size: 16px;
+    color: #25252c;
+    text-decoration: underline;
+    position: relative;
+}
+.e-mail a:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 17px;
+    height: 13px;
+    background-image: url(../images/sprite.png);
+    background-position: -24px -23px;
+    top: 2px;
+    left: 0;
+}
+.skype a{
+    position: relative;
+    text-decoration: none;
+}
+.skype a:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 19px;
+    background-image: url(../images/sprite.png);
+    background-position: -3px -23px;
+    left: 0;
+}
+.button{
+    border-radius: 30px;
+    border: 2px solid #fd8300;
+    color: #25252c;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 17px 28px;
+    float: right;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 1s ease;
+}
+.button:hover{
+    background-color: #fd8300;
+    color: #fff;
+}
+.banner{
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    padding: 56px 0;
+    text-align: center;
+    margin-bottom: 36px;
+}
+.banner p{
+   margin: 0;
+}
+p.proposition-title,
+p.proposition-description{
+    color: #fff;
+    margin-bottom: 17px;
+}
+.proposition-title{
+    font-size: 30px;
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+}
+.proposition-description{
+    font-size: 14px;
+}
+.price,
+.banner span{
+    color: #fd8300;
+    font-weight: bold;
+}
+.price{
+    font-size: 40px;
+}
+.banner span{
+    font-size: 24px;
+}
+.banner sup{
+    font-size: 14px;
+}
+aside{
+    float: right;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #e4e4ec;
+    width: 219px;
+}
+aside a{
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+aside p{
+    font-size: 16px;
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    background-color: #1f1f56;
+    color: #fff;
+    padding: 15px 13px;
+    margin: 0;
+}
+aside ul{
+    margin: 0;
+    padding: 0;
+}
+.aside-menu > li > a{
+    padding: 15px 13px;
+    display: block;
+    color: #25252c;
+    border-top: 1px solid #cdcddd;
+}
+.aside-menu > li > a:after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    width: 5px;
+    height: 5px;
+    transform: rotate(-45deg);
+    top: 22px;
+    right: 15px;
+    transition: transform  .5s ease;
+}
+.aside-menu > li > a:hover{
+    background-color: #fd8300;
+    color: #fff;
+}
+.aside-menu > li > a:hover:after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    top: 20px;
+    right: 15px;
+}
+.aside-menu > li:hover .submenu{
+    display: block;
+}
+.submenu{
+    color: #666;
+    background-color: #e4e4ec;
+    padding: 15px 13px;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #cdcddd;
+    display: none;
+}
+.submenu a{
+    display: block;
+    padding: 15px 28px;
+    color: #666;
+}
+.submenu a:hover{
+    background-color: #cecedd;
+}
+main{
+    padding-bottom: 35px;
+}
+.about-company{
+    width: 719px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #e4e4ec;
+}
+.about-company p{
+    color: #666;
+    font-size: 14px;
+    line-height: 24px;
+}
+.description{
+    color: #666;
+    font-size: 14px;
+}
+table{
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-radius: 3px;
+}
+table thead{
+    color: #fff;
+    background-color: #1f1f56;
+    text-align: left;
+}
+table thead th:last-child{
+    text-align: right;
+}
+table tbody{
+    color: #666;
+    background-color: #e4e4ec;
+}
+table tr{
+    border-bottom: 1px solid #cdcddd;
+}
+table tbody tr:hover{
+    background-color: #fd8300;
+    color: #fff;
+}
+table td,
+table th{
+    padding: 16px 18px;
+}
+table td:last-child{
+    text-align: right;
+}
+main a{
+    color: #fd8300;
+    font-weight: bold;
+    text-decoration: none;
+}
+main a:hover{
+    text-decoration: underline;
+}
+.blue-color{
+    color: #1f1f56;
+}
+.blue-color:hover{
+    text-decoration: underline;
+}
+.prices{
+    padding-bottom: 34px;
+    border-bottom: 1px solid #e4e4ec;
+}
+.popular-projects figcaption{
+    color: #9999a6;
+    font-size: 13px;
+    line-height: 18px;
+}
+.popular-projects sup,
+figure sup{
+    font-size: 10px;
+}
+.left-contacts,
+.right-contacts{
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.right-contacts input[type="text"],
+.right-contacts input[type="tel"]{
+    border-radius: 2px;
+    border: 1px solid #c4c4d3;
+    padding: 9px;
+}
+.right-contacts label input{
+    margin-bottom: 10px;
+}
+.right-contacts textarea{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 12px;
+}
+.right-contacts input[type="submit"]{
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 28px;
+    background-color: #fd8300;
+    border-radius: 23px;
+    border: none;
+    margin-right: 30px;
+}
+.right-contacts input[type="submit"]:hover{
+    background-color: #ea7b00;
+    cursor: pointer;
+}
+.left-contacts strong{
+    font-size: 18px;
+    color: #25252c;
+}
+.right-contacts{
+    float: right;
+}
+.offices{
+    display: inline-block;
+    margin-right: 80px ;
+}
+.consultation{
+    display: inline-block;
+}
+.rekvisites{
+    margin-left: 160px;
+}
+.rekvisites p{
+    font-size: 14px;
+    color: #666;
+}
+.text{
+    width: 50%;
+    border-radius: 2px;
+    border: 1px solid #c4c4d3;
+    padding: 9px;
+}
+.adress,
+.meneger,
+.direcktor{
+   font-size: 14px;
+   color: #666; 
+}
+.map{
+    float: left;
+    width: 100%;
+    height: 295px;
+    margin-right: 20px;
+}
+.name,
+.tel,
+.theme,
+.right-contacts textarea{
+    border-radius: 2px;
+    color: #9999a6;
+    padding: 9px; 
+}
+.name{
+    padding-right: 10px;
+    float: left;
+}
+.tel{
+    float: right;
+}
+.name,
+.tel{
+    width: 49%;
+}
+.theme{
+    width: 100%;
+}
+.forma input[type="checkbox"]{
+    margin-right: 10px;
+}
+.checkbox{
+    position: relative;
+    color: #666;
+    font-size: 13px;
+}
+.checkbox::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    border: 1px solid #c4c4d3;
+    z-index: 2;
+    top: -2px;
+    left: -23px;
+    background-color: white;
+}
+.forma{
+    padding-left: 28px;
+}
+.forma input:checked + .checkbox::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 7px;
+    height: 4px;
+    border-left: 2px solid #1f1f55;
+    border-bottom: 2px solid #1f1f55;
+    z-index: 4;
+    top: 1px;
+    left: -19px;
+    transform: rotate(-45deg);
+}
+.wraper-contacts{
+    padding: 35px 0 24px 0;
+}
+.border-contacts{
+    border-bottom: 1px solid #e4e4ec;
+}
+footer{                                                                                                                                                                                                
+    background-color: #ededf4; 
+    font-size: 0;                                                                                                                                                                              
+}
+footer ul{
+    padding-left: 0;
+}
+.first-bill{
+    padding-left: 0;
+}
+.first-bill,
+.second-bill{
+    display: inline-block;
+    vertical-align: top;
+}
+.first-bill a,
+.second-bill a{
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    line-height: 26px;
+}
+.first-bill a:hover,
+.second-bill a:hover{
+    color: #fd8300;
+    text-decoration: underline;
+}
+.first-bill ul,
+.second-bill ul{
+    list-style: none;
+}
+.copyright{
+    color: #9999a6;
+    background-color: #dcdce6;
+    font-size: 13px;
+    margin: 0;
+    text-align: center;
+    padding: 14px 0;
+}
+@media screen and (max-width: 980px){
+    .resize{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .column{
+        width: calc(50% - 28px);
+    }
+    .border::after{
+        display: none;
+    }
+    header .phones,
+    header .image{
+        margin-bottom: 20px;
+    }
+    header .phones p{
+        text-align: right;
+    }
+    .about-company{
+        width: 100%;
+    }
+    footer .column{
+        vertical-align: top;
+    }
+    .first-bill,
+    .second-bill{
+        margin-bottom: 20px;
+    }
+    figcaption{
+        margin-bottom: 20px;
+    }
+    .popular-projects img{
+        width: 100%;
+    }
+    .right-contacts,
+    .left-contacts{
+        width: 100%;
+        float: none;
+    }
+    .right-contacts{
+        padding-left: 0;
+    }
+    .rekvisites{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 650px){
+    .cheeckenburger-menu{
+        display: inline-block;
+    }
+    ul.top-menu{
+        display: none;
+    }
+    .scroll{
+        overflow-x: scroll;
+        width: 100%;
+}
+@media screen and (max-width: 480px){
+    .column{
+        width: calc(100% - 28px);
+    }
+    header .phones p,
+    footer .phones p,
+    .mesengers p,
+    .button,
+    .first-bill,
+    .second-bill{
+        text-align: center;
+    }
+    footer .phones{
+        margin-bottom: 20px;
+    }
+    .button{
+        width: 100%;
+    }
+    .mesengers{
+        margin-bottom: 20px;
+    }
+    aside{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .submit{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
